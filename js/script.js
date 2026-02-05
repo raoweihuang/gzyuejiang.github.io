@@ -70,6 +70,7 @@ function searchPrice() {
                     </select>
                 </div>
             `;
+
 			
 
             // 燃油叉车专属配置（仅变速箱类型）
@@ -111,7 +112,7 @@ function searchPrice() {
                             </select>
                         </div>
                         <div class="config-group">
-                            <label>货叉长度增加（cm，仅标配适用，每1cm+10元）</label>
+                            <label>货叉长度增加（cm，仅标配适用，元）</label>
                             <input type="number" id="forkLength-${index}" min="0" step="150" value="0" placeholder="输入长度增加量">
                         </div>
                         ${item.type === "锂电叉车" ? `
@@ -121,7 +122,7 @@ function searchPrice() {
                             </div>
                         ` : ""}
                         <div class="config-group">
-                            <label>门架长度增加（cm，每10cm+200元）</label>
+                            <label>门架长度增加（cm，元）</label>
                             <input type="number" id="mastAdd-${index}" min="0" step="10" value="0" placeholder="输入长度增加量（10cm递增）">
                         </div>
                         <!-- 运费输入框 -->
