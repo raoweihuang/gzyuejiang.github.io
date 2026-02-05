@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑", sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#modelInput {
+    flex: 1;
+    padding: 12px 15px;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#searchBtn {
+    padding: 12px 30px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#searchBtn:hover {
+    background: #0056b3;
+}
+
+.result-area {
+    margin-bottom: 20px;
+}
+
+.no-result {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+}
+
+.price-card {
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 20px;
+    background: #fafafa;
+    margin-bottom: 15px;
+}
+
+.price-card h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.price-card p {
+    margin: 8px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.base-price {
+    font-size: 18px !important;
+    color: #d9534f !important;
+    font-weight: bold;
+}
+
+.final-price {
+    font-size: 22px !important;
+    color: #28a745 !important;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.config-options {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed #ccc;
+}
+
+.config-group {
+    margin-bottom: 15px;
+}
+
+.config-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* 🔥 核心修改：未选择时白色背景+灰色边框，选中后变蓝色 */
+.config-group select {
+    padding: 8px 10px;
+    border: 1px solid #ddd; /* 未选择时灰色边框 */
+    background-color: #fff; /* 未选择时白色背景 */
+    color: #333; /* 未选择时默认文字颜色 */
+    border-radius: 4px;
+    font-size: 14px;
+    width: 300px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11l4-4H4l4 4z'/%3E%3C/svg%3E"); /* 未选择时灰色箭头 */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+
+/* 选中/hover 时变蓝色 */
+.config-group select:hover,
+.config-group select:focus,
+.config-group select:checked {
+    border-color: #007bff; /* 蓝色边框 */
+    background-color: #e6f0ff; /* 浅蓝色背景 */
+    color: #007bff; /* 蓝色文字 */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23007bff' viewBox='0 0 16 16'%3E%3Cpath d='M8 11l4-4H4l4 4z'/%3E%3C/svg%3E"); /* 蓝色箭头 */
+}
+
+/* 聚焦时增强阴影 */
+.config-group select:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* 蓝色聚焦阴影 */
+}
+
+.config-group input {
+    padding: 8px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 300px;
+}
+
+.config-group input[type="number"] {
+    width: 150px;
+}
+
+.calc-btn {
+    margin: 15px 0;
+    padding: 10px 25px;
+    background: #ff7f0e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.calc-btn:hover {
+    background: #e67200;
+}
+
+.config-summary {
+    margin-top: 15px;
+    padding: 10px;
+    background: #e9f7ef;
+    border-radius: 4px;
+}
+
+.config-summary p {
+    color: #28a745;
+    font-size: 14px;
+    line-height: 1.6;
+}
